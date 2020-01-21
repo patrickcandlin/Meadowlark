@@ -1,0 +1,22 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "travel information",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickcandlin/Meadowlark.git"
+  },
+  "author": "patrick candlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickcandlin/Meadowlark/issues"
+  },
+  "homepage": "https://github.com/patrickcandlin/Meadowlark#readme",
+  "dependencies": {
+    "express-handlebars": "^3.1.0"
+  }
+}
