@@ -11,29 +11,21 @@ app.set('view engine', 'handlebars')
 const port = process.env.port || 3000
 
 // index
-app.get('/', (req, res) => {
-    res.type('text/plain')
-    res.send('Meadowlark Travel')
-})
+app.get('/', (req, res) => res.render('home'))
 
 // about route
-app.get('/about', (req, res) => {
-    res.type('text/plain')
-    res.send('About Meadowlark Travel')
-  })
+app.get('/about', (req, res) => res.render('about'))
 
 // custom 404 page
 app.use((req, res) => {
-    res.type('text/plain')
     res.status(400)
-    res.send('404 - Not Found')
+    res.render('404')
 })
 // custom 500 page
 app.use((err, req, res, next) => {
     console.error(err.message)
-    res.type('text/plain')
     res.status(500)
-    res.send('500 - Server Error')
+    res.render('500')
 })
 
 app.listen(port, () => console.log(
