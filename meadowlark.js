@@ -1,10 +1,5 @@
-const fortunes = [
-    "Conquer your fears or they will conquer you.", 
-    "Rivers need springs.", 
-    "Do not fear what you don't know.",  
-    "You will have a pleasant surprise.",  
-    "Whenever possible, keep it simple."
-]
+
+const fortune = require('./lib/fortune')
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
 
@@ -24,8 +19,7 @@ app.get('/', (req, res) => res.render('home'))
 
 // about route
 app.get('/about', (req, res) => {
-    const randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)]
-    res.render('about', { fortune: randomFortune})
+    res.render('about', { fortune: fortune.getFortune()})
 })
 
 // custom 404 page
