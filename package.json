@@ -4,7 +4,8 @@
   "description": "travel information",
   "main": "meadowlark.js",
   "scripts": {
-    "test": "run test"
+    "test": "jest",
+    "start": "node meadowlark.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/patrickcandlin/Meadowlark#readme",
   "dependencies": {
     "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
